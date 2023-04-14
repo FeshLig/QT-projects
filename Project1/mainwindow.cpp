@@ -65,5 +65,7 @@ void MainWindow::clearLines() {
 }
 
 void MainWindow::enableAddButton() {
-  addButton->setEnabled(!(lineEdit1->text().isEmpty() || lineEdit2->text().isEmpty() || lineEdit3->text().isEmpty()));
+  addButton->setEnabled(!(lineEdit1->text().isEmpty() ||
+                          lineEdit2->text().isEmpty() ||
+                          lineEdit3->text().isEmpty()));
 }
