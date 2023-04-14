@@ -14,12 +14,12 @@ class MainWindow : public QDialog {
         explicit MainWindow(QWidget *parent = 0);
 
     signals:
-        void findPrevious(const QString &str1, const QString &str2, const QString &str3);
+        void createNewLog(const QString &str1, const QString &str2, const QString &str3);
 
     public slots:
         void findClicked();
         void clearLines();
-        void enableAddButton(const QString &text);
+        void enableAddButton();
 
     private:
         QLabel *label1;

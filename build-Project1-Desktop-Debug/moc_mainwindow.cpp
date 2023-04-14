@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[10];
-    char stringdata0[84];
+    QByteArrayData data[9];
+    char stringdata0[79];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,20 +33,18 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 12), // "findPrevious"
+QT_MOC_LITERAL(1, 11, 12), // "createNewLog"
 QT_MOC_LITERAL(2, 24, 0), // ""
 QT_MOC_LITERAL(3, 25, 4), // "str1"
 QT_MOC_LITERAL(4, 30, 4), // "str2"
 QT_MOC_LITERAL(5, 35, 4), // "str3"
 QT_MOC_LITERAL(6, 40, 11), // "findClicked"
 QT_MOC_LITERAL(7, 52, 10), // "clearLines"
-QT_MOC_LITERAL(8, 63, 15), // "enableAddButton"
-QT_MOC_LITERAL(9, 79, 4) // "text"
+QT_MOC_LITERAL(8, 63, 15) // "enableAddButton"
 
     },
-    "MainWindow\0findPrevious\0\0str1\0str2\0"
-    "str3\0findClicked\0clearLines\0enableAddButton\0"
-    "text"
+    "MainWindow\0createNewLog\0\0str1\0str2\0"
+    "str3\0findClicked\0clearLines\0enableAddButton"
 };
 #undef QT_MOC_LITERAL
 
@@ -69,7 +67,7 @@ static const uint qt_meta_data_MainWindow[] = {
  // slots: name, argc, parameters, tag, flags
        6,    0,   41,    2, 0x0a /* Public */,
        7,    0,   42,    2, 0x0a /* Public */,
-       8,    1,   43,    2, 0x0a /* Public */,
+       8,    0,   43,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString,    3,    4,    5,
@@ -77,7 +75,7 @@ static const uint qt_meta_data_MainWindow[] = {
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,    9,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -88,17 +86,17 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         auto *_t = static_cast<MainWindow *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->findPrevious((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3]))); break;
+        case 0: _t->createNewLog((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3]))); break;
         case 1: _t->findClicked(); break;
         case 2: _t->clearLines(); break;
-        case 3: _t->enableAddButton((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 3: _t->enableAddButton(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
             using _t = void (MainWindow::*)(const QString & , const QString & , const QString & );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&MainWindow::findPrevious)) {
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&MainWindow::createNewLog)) {
                 *result = 0;
                 return;
             }
@@ -147,7 +145,7 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void MainWindow::findPrevious(const QString & _t1, const QString & _t2, const QString & _t3)
+void MainWindow::createNewLog(const QString & _t1, const QString & _t2, const QString & _t3)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);

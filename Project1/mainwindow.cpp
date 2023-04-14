@@ -21,7 +21,11 @@ MainWindow::MainWindow(QWidget *parent) : QDialog(parent) {
   clearButton = new QPushButton(tr("&Clear"));
 
   connect(lineEdit1, SIGNAL(textChanged(const QString &)), this,
-          SLOT(enableAddButton(const QString &)));
+          SLOT(enableAddButton()));
+  connect(lineEdit2, SIGNAL(textChanged(const QString &)), this,
+          SLOT(enableAddButton()));
+  connect(lineEdit3, SIGNAL(textChanged(const QString &)), this,
+          SLOT(enableAddButton()));
   connect(addButton, SIGNAL(clicked()), this, SLOT(findClicked()));
   connect(clearButton, SIGNAL(clicked()), this, SLOT(clearLines()));
 
@@ -50,7 +54,7 @@ void MainWindow::findClicked() {
   QString text1 = lineEdit1->text();
   QString text2 = lineEdit2->text();
   QString text3 = lineEdit3->text();
-  emit findPrevious(text1, text2, text3);
+  emit createNewLog(text1, text2, text3);
   close();
 }
 
@@ -60,6 +64,6 @@ void MainWindow::clearLines() {
   lineEdit3->clear();
 }
 
-void MainWindow::enableAddButton(const QString &text) {
-  addButton->setEnabled(!text.isEmpty());
+void MainWindow::enableAddButton() {
+  addButton->setEnabled(!(lineEdit1->text().isEmpty() || lineEdit2->text().isEmpty() || lineEdit3->text().isEmpty()));
 }
