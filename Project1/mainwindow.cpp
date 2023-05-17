@@ -2,11 +2,11 @@
 #include <QtWidgets>
 
 MainWindow::MainWindow(QWidget *parent) : QDialog(parent) {
-  label1 = new QLabel(tr("Constant value"));
+  label1 = new QLabel("Constant value");
   lineEdit1 = new QLineEdit;
   label1->setBuddy(lineEdit1);
 
-  label2 = new QLabel(tr("Formula or notation"));
+  label2 = new QLabel("Formula or notation");
   lineEdit2 = new QLineEdit;
   label2->setBuddy(lineEdit2);
 
@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent) : QDialog(parent) {
   addButton->setDefault(true);
   addButton->setEnabled(false);
 
-  clearButton = new QPushButton(tr("&Clear"));
+  clearButton = new QPushButton("&Clear");
 
   connect(lineEdit1, SIGNAL(textChanged(const QString &)), this,
           SLOT(enableAddButton()));
@@ -46,7 +46,7 @@ MainWindow::MainWindow(QWidget *parent) : QDialog(parent) {
   mainLayout->addLayout(bottomLayout);
   setLayout(mainLayout);
 
-  setWindowTitle(tr("MainWindow"));
+  setWindowTitle("MainWindow");
   setFixedHeight(sizeHint().height());
 }
 
