@@ -10,11 +10,11 @@ MainWindow::MainWindow(QWidget *parent) : QDialog(parent) {
   lineEdit2 = new QLineEdit;
   label2->setBuddy(lineEdit2);
 
-  label3 = new QLabel(tr("Numeric value"));
+  label3 = new QLabel("Numeric value");
   lineEdit3 = new QLineEdit;
   label3->setBuddy(lineEdit3);
 
-  addButton = new QPushButton(tr("&Add"));
+  addButton = new QPushButton("&Add");
   addButton->setDefault(true);
   addButton->setEnabled(false);
 
